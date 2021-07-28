@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+// Prime Sieve
+vi prime(N,1),pr;
+void primeSieve(){
+	prime[1]=0;
+	for(ll i=2;i<N;i++){
+		if(prime[i]==0)
+			continue;
+		for(ll j=2*i;j<N;j+=i){
+			prime[j]=0;
+		}
+	}
+	for(ll i=2;i<N;i++){
+		if(prime[i]==1){
+			pr.eb(i);
+		}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>primeSieve</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
